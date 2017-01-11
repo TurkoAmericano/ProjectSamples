@@ -1,0 +1,118 @@
+﻿<div class="panel panel-primary">
+    <div class="sample-heading">Manage Customers</div>
+
+    <div id="panel-group">
+        <div class="errorMsg">{{vm.message}}</div>
+        <div>
+            <div class="view-window">
+                <div id="left">
+                    <div class="left-margin">
+                        <div ui-grid="customerGridOptions" ui-grid-selection="" class="gridStyle"></div>
+                        <div class="data-left">
+                            <div>
+                                <button class="btn-left" ng-show="customerEditVisible" ng-click="customerNewSelection()">Add New</button>
+                                <button class="btn-right" ng-hide="customerEditVisible" ng-click="customerDeleteSelection()">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form name="mainForm">
+                    <div id="right">
+                        <div class="right-margin">
+                            <div class="panel-group" ng-hide="customerEditVisible">
+                                <div class="edit-data-group">
+                                    <div class="data-edit-left">
+                                        <p>First Name</p>
+                                        <p>M</p>
+                                        <p>Last Name</p>
+                                    </div>
+                                    <div class="data-edit-right">
+                                        <div class="field-space">
+                                            <input class="edit-control"
+                                                   id="firstName"
+                                                   name="firstName"
+                                                   type="text"
+                                                   placeholder="First Name (required)"
+                                                   ng-model="myCustomerSelections[0].firstName"
+                                                   required
+                                                   ng-minlength="1"
+                                                   ng-maxlength="20" style="width:86px;" />
+                                        </div>
+                                        <div class="field-space">
+                                            <input class="edit-control"
+                                                   id="inputMiddleName"
+                                                   name="inputMiddleName"
+                                                   type="text"
+                                                   placeholder="Middle Name"
+                                                   ng-model="myCustomerSelections[0].middleName"
+                                                   ng-minlength="1"
+                                                   ng-maxlength="40" style="width:160px;" />
+                                        </div>
+                                        <div class="field-space">
+                                            <input class="edit-control"
+                                                   id="inputLastName"
+                                                   name="inputLastName"
+                                                   type="text"
+                                                   placeholder="Last Name (required)"
+                                                   ng-model="myCustomerSelections[0].lastName"
+                                                   required
+                                                   ng-minlength="1"
+                                                   ng-maxlength="40" style="width:160px;" />
+                                        </div>
+                                        <div class="field-space">
+                                            <input class="edit-control"
+                                                   id="inputAddress"
+                                                   name="inputAddress"
+                                                   type="text"
+                                                   placeholder="Address"
+                                                   ng-model="myCustomerSelections[0].address"
+                                                   ng-minlength="1"
+                                                   ng-maxlength="40" style="width:160px;" />
+                                        </div>
+                                        <div class="field-space">
+                                            <input class="edit-control"
+                                                   id="inputCity"
+                                                   name="inputCity"
+                                                   type="text"
+                                                   placeholder="City"
+                                                   ng-model="myCustomerSelections[0].city"
+                                                   ng-minlength="1"
+                                                   ng-maxlength="40" style="width:160px;" />
+                                        </div>
+                                        <div class="field-space">
+                                            <input class="edit-control"
+                                                   id="inputState"
+                                                   name="inputState"
+                                                   type="text"
+                                                   placeholder="State"
+                                                   ng-model="myCustomerSelections[0].state"
+                                                   ng-minlength="1"
+                                                   ng-maxlength="40" style="width:160px;" />
+                                        </div>
+                                        <div class="field-space">
+                                            <input class="edit-control"
+                                                   id="inputPostalCode"
+                                                   name="inputPostalCode"
+                                                   type="text"
+                                                   placeholder="Postal Code"
+                                                   ng-model="myCustomerSelections[0].postalCode"
+                                                   ng-minlength="1"
+                                                   ng-maxlength="40" style="width:160px;" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-left">
+                                    <div>
+                                        <button class="btn-left-edit" ng-click="customerSaveSelection()" ng-disabled="mainForm.$invalid">Save</button>
+                                        <button class="btn-right-edit" ng-click="customerCancelSelection()">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="view-bottom">Sample AngularJS MVC MVVM</div>
+</div>

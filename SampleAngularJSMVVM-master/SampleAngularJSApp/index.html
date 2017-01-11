@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html ng-app="sampleCustomers">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/ui-grid.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
+
+    <!-- Library Scripts -->
+    <script src="Scripts/jquery-2.2.4.min.js"></script>
+    <script src="Scripts/jquery-ui-1.11.4.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    <script src="Scripts/ui-grid.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="services/sample.services.js"></script>
+    <script src="services/sample.webApiServices.js"></script>
+
+    <!-- Common resources -->
+    <script src="common/sample.customerCache.js"></script>
+
+    <!-- Product Controllers -->
+    <script src="controllers/customerController.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div ui-view=""></div>
+    </div>
+</body>
+
+</html>
